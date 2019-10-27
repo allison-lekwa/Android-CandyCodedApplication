@@ -14,7 +14,7 @@
         android:layout_marginRight="0dp"
         android:layout_marginTop="0dp"
         android:adjustViewBounds="true"
-        android:contentDescription="Candy Store"
+        android:contentDescription="@string/candy_store"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -49,6 +49,8 @@
         android:text="@string/_012_345_6789"
         android:textColor="?android:attr/actionMenuTextColor"
         android:textSize="18sp"
+        android:clickable="true"
+        android:onClick="createPhoneIntent"
         app:layout_constraintLeft_toLeftOf="@+id/text_view_address"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_map" />
@@ -57,12 +59,10 @@
         android:id="@+id/text_view_hours"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center_vertical"
-        android:text="Everyday 10am-10pm"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="@+id/text_view_phone"
+        app:layout_constraintEnd_toStartOf="@+id/image_view_hours"
         app:layout_constraintTop_toTopOf="@+id/image_view_hours" />
 
     <ImageView
@@ -72,6 +72,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/phone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_map"
         app:srcCompat="@android:drawable/stat_sys_phone_call" />
